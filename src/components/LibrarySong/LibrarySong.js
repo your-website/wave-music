@@ -7,15 +7,13 @@ import {
   SongDescription,
 } from "./style";
 
-const LibrarySong = ({
-  song,
-  song: { name, cover, artist, id },
-  setCurrentSong,
-  setIsPlaying,
-}) => {
+const LibrarySong = ({ song, setCurrentSong, audioRef, setIsPlaying }) => {
+  const { name, cover, artist } = song;
+
   const songSelectHandlerntSong = async () => {
-    await setIsPlaying(false);
     await setCurrentSong(song);
+    setIsPlaying(true);
+    audioRef.current.play();
   };
 
   return (
