@@ -42,4 +42,14 @@ const H4 = styled.h4`
   color: rgb(100, 100, 100);
 `;
 
-export { H1, H2, H3, H4, GlobalStyle };
+const AppContainer = styled.div.attrs((props) => ({
+  className: props.className,
+}))`
+  transition: all 0.5s ease;
+
+  &.library-active {
+    margin-left: 30%;
+  }
+`;
+
+export { H1, H2, H3, H4, GlobalStyle, AppContainer };

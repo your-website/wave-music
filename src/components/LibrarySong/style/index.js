@@ -8,7 +8,8 @@ const LibrarySongContainer = styled.div.attrs((props) => ({
   align-items: center;
   padding: 1rem 2rem;
   cursor: pointer;
-  background: #fff;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
 
   &.selected {
     background: #f9e1f9;
@@ -16,6 +17,9 @@ const LibrarySongContainer = styled.div.attrs((props) => ({
 
   &:hover {
     background: rgb(222, 222, 225);
+  }
+
+  @media screen and (max-width: 768px) {
   }
 `;
 

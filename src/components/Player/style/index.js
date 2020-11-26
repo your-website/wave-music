@@ -12,6 +12,10 @@ const TimeControl = styled.div`
   width: 50%;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const PlayerInput = styled.input`
@@ -46,6 +50,10 @@ const PlayControl = styled.div`
 
   & svg {
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 60%;
   }
 `;
 

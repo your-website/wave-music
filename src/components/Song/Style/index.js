@@ -12,6 +12,10 @@ const SongContainer = styled.div`
 const SongImage = styled.img`
   width: 20%;
   border-radius: 50%;
+
+  @media screen and (max-width: 768px) {
+    width: 60%;
+  }
 `;
 
 const ContentTitle = styled(H2)`

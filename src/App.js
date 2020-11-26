@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import data from "./data";
-import { GlobalStyle } from "./assets/style";
+import { GlobalStyle, AppContainer } from "./assets/style";
 import Song from "./components/Song";
 import Player from "./components/Player";
 import Library from "./components/Library";
@@ -45,7 +45,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <AppContainer className={`App ${libraryStatus ? "library-active" : ""}`}>
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
       <GlobalStyle />
       <Song currentSong={currentSong} />
@@ -75,7 +75,7 @@ function App() {
         src={currentSong.audio}
         onEnded={songEndHandler}
       ></audio>
-    </div>
+    </AppContainer>
   );
 }
 

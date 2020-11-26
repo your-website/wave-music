@@ -15,10 +15,15 @@ const LibraryContainer = styled.div.attrs((props) => ({
   transition: all 0.5s ease;
   opacity: 0;
   z-index: 1;
+  background-color: #fff;
 
   &.active-library {
     transform: translateX(0%);
     opacity: 1;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
   }
 `;
 
