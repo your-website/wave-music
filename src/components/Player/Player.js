@@ -5,6 +5,7 @@ import {
   faPlay,
   faAngleLeft,
   faAngleRight,
+  faPause,
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -13,6 +14,7 @@ import {
   TimeControl,
   Paragraph,
   PlayControl,
+  H1,
 } from "./style";
 
 const Player = ({ currentSong: { audio }, isPlaying, setIsPlaying }) => {
@@ -53,7 +55,7 @@ const Player = ({ currentSong: { audio }, isPlaying, setIsPlaying }) => {
 
   return (
     <PlayerContainer>
-      <h1>Hello Player</h1>
+      <H1>Hello Player</H1>
       <TimeControl>
         <Paragraph>{getTime(songInfo.currentTime)}</Paragraph>
         <PlayerInput
@@ -67,7 +69,11 @@ const Player = ({ currentSong: { audio }, isPlaying, setIsPlaying }) => {
       </TimeControl>
       <PlayControl>
         <FontAwesomeIcon size="2x" icon={faAngleLeft} />
-        <FontAwesomeIcon onClick={playSongHandler} size="2x" icon={faPlay} />
+        <FontAwesomeIcon
+          onClick={playSongHandler}
+          size="2x"
+          icon={isPlaying ? faPause : faPlay}
+        />
         <FontAwesomeIcon size="2x" icon={faAngleRight} />
       </PlayControl>
       <audio

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { H1 } from "../../../assets/style";
 
 const PlayerContainer = styled.section`
   min-height: 20vh;
@@ -34,4 +35,11 @@ const PlayControl = styled.div`
   }
 `;
 
-export { PlayerContainer, PlayerInput, TimeControl, Paragraph, PlayControl };
+export {
+  PlayerContainer,
+  PlayerInput,
+  TimeControl,
+  Paragraph,
+  PlayControl,
+  H1,
+};

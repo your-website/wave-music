@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import data from "./data";
-
-import "./App.css";
+import { GlobalStyle } from "./assets/style";
 import Song from "./components/Song";
 import Player from "./components/Player";
+import Library from "./components/Library";
 
 function App() {
   const [songs, setSongs] = useState(data());
@@ -14,12 +14,14 @@ function App() {
 
   return (
     <div className="App">
+      <GlobalStyle />
       <Song currentSong={currentSong} />
       <Player
         setIsPlaying={setIsPlaying}
         isPlaying={isPlaying}
         currentSong={currentSong}
       />
+      <Library songs={songs} />
     </div>
   );
 }
