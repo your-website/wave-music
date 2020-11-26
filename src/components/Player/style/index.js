@@ -15,7 +15,7 @@ const TimeControl = styled.div`
 
 const PlayerInput = styled.input`
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 1rem 0;
 `;
 
 const Paragraph = styled.p`

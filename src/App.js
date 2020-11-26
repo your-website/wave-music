@@ -8,7 +8,7 @@ import Player from "./components/Player";
 function App() {
   const [songs, setSongs] = useState(data());
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentSong, setCirrentSong] = useState(
+  const [currentSong, setCurrentSong] = useState(
     songs.find((el) => el.active === true)
   );
 
