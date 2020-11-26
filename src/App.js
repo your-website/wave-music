@@ -31,11 +31,14 @@ function App() {
       <GlobalStyle />
       <Song currentSong={currentSong} />
       <Player
+        songs={songs}
         songInfo={songInfo}
         setSongInfo={setSongInfo}
         audioRef={audioRef}
         setIsPlaying={setIsPlaying}
         isPlaying={isPlaying}
+        currentSong={currentSong}
+        setCurrentSong={setCurrentSong}
       />
       <Library
         libraryStatus={libraryStatus}

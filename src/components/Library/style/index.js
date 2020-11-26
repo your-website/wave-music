@@ -14,6 +14,7 @@ const LibraryContainer = styled.div.attrs((props) => ({
   transform: translateX(-100%);
   transition: all 0.5s ease;
   opacity: 0;
+  z-index: 1;
 
   &.active-library {
     transform: translateX(0%);

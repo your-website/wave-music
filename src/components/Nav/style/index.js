@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { H1 } from "../../../assets/style";
 
 const NavContainer = styled.nav`
   min-height: 10vh;
@@ -14,6 +15,7 @@ const Button = styled.button`
   border: 2px solid rgb(65, 65, 65);
   padding: 0.5rem;
   transition: all 0.2s ease;
+  z-index: 2;
 
   &:hover {
     background: rgb(65, 65, 65);
@@ -21,4 +23,8 @@ const Button = styled.button`
   }
 `;
 
-export { NavContainer, Button };
+const ContentTitle = styled(H1)`
+  z-index: 2;
+`;
+
+export { NavContainer, Button, ContentTitle };
