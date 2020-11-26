@@ -7,9 +7,22 @@ import {
   SongDescription,
 } from "./style";
 
-const LibrarySong = ({ song: { name, cover, artist } }) => {
+const LibrarySong = ({
+  song,
+  song: { name, cover, artist, id },
+  setCurrentSong,
+  setIsPlaying,
+}) => {
+  const songSelectHandlerntSong = async () => {
+    await setIsPlaying(false);
+    await setCurrentSong(song);
+  };
+
   return (
-    <LibrarySongContainer className="librarySongContainer">
+    <LibrarySongContainer
+      onClick={songSelectHandlerntSong}
+      className="librarySongContainer"
+    >
       <SongImage src={cover} alt={name} />
       <SongDescription>
         <ContentTitle>{name}</ContentTitle>

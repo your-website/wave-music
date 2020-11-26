@@ -4,7 +4,7 @@ import {
   SongImage,
   ContentTitle,
   ContentSubtitle,
-} from "./Style";
+} from "./style";
 
 const Song = ({ currentSong: { cover, name, artist } }) => {
   return (
