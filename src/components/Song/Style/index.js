@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { H2, H3 } from "../../../assets/style";
 
 const SongContainer = styled.section`
   min-height: 60vh;
@@ -8,4 +9,17 @@ const SongContainer = styled.section`
   justify-content: center;
 `;
 
-export { SongContainer };
+const SongImage = styled.img`
+  width: 20%;
+  border-radius: 50%;
+`;
+
+const ContentTitle = styled(H2)`
+  padding: 3rem 1rem 1rem 1rem;
+`;
+
+const ContentSubtitle = styled(H3)`
+  font-size: 1rem;
+`;
+
+export { SongContainer, SongImage, ContentTitle, ContentSubtitle };

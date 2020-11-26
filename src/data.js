@@ -9,7 +9,7 @@ function chillHop() {
       audio: "https://mp3.chillhop.com/serve.php/?mp3=10075",
       color: ["#205950", "#2ab3bf"],
       id: uuidv4(),
-      active: true,
+      active: false,
     },
     {
       name: "Daylight",
@@ -69,7 +69,7 @@ function chillHop() {
       audio: "https://mp3.chillhop.com/serve.php/?mp3=10140",
       color: ["#605291", "#8B5F7F"],
       id: uuidv4(),
-      active: false,
+      active: true,
     },
     {
       name: "Cold outside",

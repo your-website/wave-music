@@ -18,7 +18,7 @@ const PlayerInput = styled.input`
   padding: 1rem 2rem;
 `;
 
-const Label = styled.label`
+const Paragraph = styled.p`
   padding: 1rem;
 `;
 
@@ -34,4 +34,4 @@ const PlayControl = styled.div`
   }
 `;
 
-export { PlayerContainer, PlayerInput, TimeControl, Label, PlayControl };
+export { PlayerContainer, PlayerInput, TimeControl, Paragraph, PlayControl };
