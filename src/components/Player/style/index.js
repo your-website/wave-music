@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { H1 } from "../../../assets/style";
 
-const PlayerContainer = styled.section`
+const PlayerContainer = styled.div`
   min-height: 20vh;
   display: flex;
   flex-direction: column;
@@ -35,11 +34,4 @@ const PlayControl = styled.div`
   }
 `;
 
-export {
-  PlayerContainer,
-  PlayerInput,
-  TimeControl,
-  Paragraph,
-  PlayControl,
-  H1,
-};
+export { PlayerContainer, PlayerInput, TimeControl, Paragraph, PlayControl };

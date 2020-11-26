@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { H2, H3 } from "../../../assets/style";
 
-const SongContainer = styled.section`
+const SongContainer = styled.div`
   min-height: 60vh;
   display: flex;
   flex-direction: column;

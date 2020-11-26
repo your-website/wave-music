@@ -1,14 +1,21 @@
 import styled from "styled-components";
 import { H3, H4 } from "../../../assets/style";
 
-const LibrarySongContainer = styled.div`
+const LibrarySongContainer = styled.div.attrs((props) => ({
+  className: props.className,
+}))`
   display: flex;
   align-items: center;
   padding: 1rem 2rem;
   cursor: pointer;
+  background: #fff;
+
+  &.selected {
+    background: #f9e1f9;
+  }
 
   &:hover {
-    background-color: rgb(222, 222, 225);
+    background: rgb(222, 222, 225);
   }
 `;
 
