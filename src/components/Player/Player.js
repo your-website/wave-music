@@ -1,4 +1,5 @@
 import React from "react";
+import { playAudio } from "../../utils/playAudio";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -14,6 +15,8 @@ import {
   TimeControl,
   Paragraph,
   PlayControl,
+  AnimateTrack,
+  Track,
 } from "./style";
 
 const Player = ({
@@ -56,24 +59,42 @@ const Player = ({
     if (direction === "skip-back") {
       if ((currentIndex - 1) % songs.length === -1) {
         setCurrentSong(songs[songs.length - 1]);
+        playAudio(isPlaying, audioRef);
         return;
       }
       setCurrentSong(songs[(currentIndex - 1) % songs.length]);
     }
+    playAudio(isPlaying, audioRef);
   };
+
+  // Add the styles
+  const trackAnim = {
+    transform: `translateX(${songInfo.animationPercentage}%)`,
+  };
+
+  console.log(trackAnim);
 
   return (
     <PlayerContainer>
       <TimeControl>
         <Paragraph>{getTime(songInfo.currentTime)}</Paragraph>
-        <PlayerInput
-          min={0}
-          max={songInfo.duration || 0}
-          value={songInfo.currentTime}
-          onChange={dragHandler}
-          type="range"
-        />
-        <Paragraph>{getTime(songInfo.duration)}</Paragraph>
+        <Track
+          style={{
+            background: `linear-gradient(to right, ${currentSong.color[0]}, ${currentSong.color[1]})`,
+          }}
+        >
+          <PlayerInput
+            min={0}
+            max={songInfo.duration || 0}
+            value={songInfo.currentTime}
+            onChange={dragHandler}
+            type="range"
+          />
+          <AnimateTrack style={trackAnim} />
+        </Track>
+        <Paragraph>
+          {songInfo.duration ? getTime(songInfo.duration) : "0:00"}
+        </Paragraph>
       </TimeControl>
       <PlayControl>
         <FontAwesomeIcon

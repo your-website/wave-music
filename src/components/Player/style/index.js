@@ -11,11 +11,26 @@ const PlayerContainer = styled.div`
 const TimeControl = styled.div`
   width: 50%;
   display: flex;
+  align-items: center;
 `;
 
 const PlayerInput = styled.input`
   width: 100%;
-  padding: 1rem 0;
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+  margin: 0;
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+  }
 `;
 
 const Paragraph = styled.p`
@@ -27,11 +42,39 @@ const PlayControl = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  width: 30%;
+  width: 40%;
 
   & svg {
     cursor: pointer;
   }
 `;
 
-export { PlayerContainer, PlayerInput, TimeControl, Paragraph, PlayControl };
+const Track = styled.div`
+  position: relative;
+  width: 100%;
+  height: 1rem;
+  background: lightblue;
+  border-radius: 1rem;
+  overflow: hidden;
+`;
+
+const AnimateTrack = styled.div`
+  width: 100%;
+  height: 100%;
+  background: rgb(204, 204, 204);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(0);
+  pointer-events: none;
+`;
+
+export {
+  PlayerContainer,
+  PlayerInput,
+  TimeControl,
+  Paragraph,
+  PlayControl,
+  Track,
+  AnimateTrack,
+};

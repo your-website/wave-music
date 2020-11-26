@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   LibrarySongContainer,
   SongImage,
@@ -36,8 +37,6 @@ const LibrarySong = ({
     setIsPlaying(true);
     audioRef.current.play();
   };
-
-  console.log();
 
   return (
     <LibrarySongContainer
