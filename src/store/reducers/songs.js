@@ -1,6 +1,6 @@
 import data from "../../data";
 import {
-  SET_SONGS,
+  SET_ACTIVE_SONG,
   SET_SONG_IS_PLAYING,
   SET_CURRENT_SONG,
   SET_AUDIO_REF,
@@ -15,7 +15,7 @@ const initialState = {
 
 const songs = (state = initialState, action) => {
   switch (action.type) {
-    case SET_SONGS:
+    case SET_ACTIVE_SONG:
       return {
         ...state,
         songsData: action.payload,

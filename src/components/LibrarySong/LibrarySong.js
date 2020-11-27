@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { setSongIsPlaying, setSongs } from "../../store/actions/songs";
+import { setSongIsPlaying, setActiveSong } from "../../store/actions/songs";
 
 import {
   LibrarySongContainer,
@@ -16,13 +16,13 @@ const LibrarySong = ({
   audioRef,
   setSongIsPlaying,
   songs,
-  setSongs,
+  setActiveSong,
 }) => {
   const { name, cover, artist, id } = song;
 
   const songSelectHandlerntSong = async () => {
     await setCurrentSong(song);
-    setSongs(songs, id);
+    setActiveSong(songs, id);
     setSongIsPlaying(true);
     audioRef.play();
   };
@@ -48,6 +48,6 @@ const mapStateToProps = ({ songsData, audioRef }) => {
   };
 };
 
-export default connect(mapStateToProps, { setSongIsPlaying, setSongs })(
+export default connect(mapStateToProps, { setSongIsPlaying, setActiveSong })(
   LibrarySong
 );

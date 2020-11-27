@@ -8,8 +8,6 @@ class Audio extends Component {
   };
 
   componentDidMount() {
-    console.log(this.props);
-
     const { setAudioRef } = this.props;
     setAudioRef(this.audioRef);
   }
@@ -30,6 +28,7 @@ class Audio extends Component {
       currentTime: current,
       duration,
       animationPercentage,
+      volume: e.target.volume,
     });
   };
 

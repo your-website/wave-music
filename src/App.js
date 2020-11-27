@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
+import { setCurrentSong } from "./store/actions/songs";
 
 import { GlobalStyle, AppContainer } from "./assets/style";
 
@@ -9,7 +10,7 @@ import Library from "./components/Library";
 import Nav from "./components/Nav";
 import Audio from "./components/Audio/Audio";
 
-function App({ songs }) {
+function App({ songs, currentSong: test, setCurrentSong: setTest }) {
   const [currentSong, setCurrentSong] = useState(
     songs.find((el) => el.active === true)
   );
@@ -18,6 +19,7 @@ function App({ songs }) {
     currentTime: 0,
     duration: 0,
     animationPercentage: 0,
+    volume: 0,
   });
 
   const [libraryStatus, setLibraryStatus] = useState(false);
@@ -48,8 +50,8 @@ function App({ songs }) {
   );
 }
 
-const mapStateToProps = ({ songsData }) => {
-  return { songs: songsData };
+const mapStateToProps = ({ songsData, currentSong }) => {
+  return { songs: songsData, currentSong };
 };
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, { setCurrentSong })(App);

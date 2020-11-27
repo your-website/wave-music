@@ -1,9 +1,9 @@
-export const SET_SONGS = "SET_SONGS";
+export const SET_ACTIVE_SONG = "SET_ACTIVE_SONG";
 export const SET_SONG_IS_PLAYING = "SET_SONG_IS_PLAYING";
 export const SET_CURRENT_SONG = "SET_CURRENT_SONG";
 export const SET_AUDIO_REF = "SET_AUDIO_REF";
 
-export const setSongs = (arraySongs, id) => {
+export const setActiveSong = (arraySongs, id) => {
   const newSongs = arraySongs.map((song) => {
     if (song.id === id) {
       return {
@@ -17,8 +17,9 @@ export const setSongs = (arraySongs, id) => {
       };
     }
   });
+
   return {
-    type: SET_SONGS,
+    type: SET_ACTIVE_SONG,
     payload: newSongs,
   };
 };

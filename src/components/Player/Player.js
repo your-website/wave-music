@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { setSongIsPlaying } from "../../store/actions/songs";
 
@@ -8,6 +8,7 @@ import {
   faAngleLeft,
   faAngleRight,
   faPause,
+  faVolumeDown,
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -18,6 +19,7 @@ import {
   PlayControl,
   AnimateTrack,
   Track,
+  InputVolume,
 } from "./style";
 
 const Player = ({
@@ -30,6 +32,8 @@ const Player = ({
   currentSong,
   setCurrentSong,
 }) => {
+  const [activeVolume, setActiveVolume] = useState(false);
+
   const getTime = (time) => {
     return (
       Math.floor(time / 60) + ":" + ("0" + Math.floor(time % 60)).slice(-2)
@@ -48,7 +52,7 @@ const Player = ({
 
   const dragHandler = (e) => {
     const currentTime = e.target.value;
-    audioRef.current.currentTime = currentTime;
+    audioRef.currentTime = currentTime;
     setSongInfo({ ...songInfo, currentTime });
   };
 
@@ -68,7 +72,12 @@ const Player = ({
     if (isPlaying) audioRef.play();
   };
 
-  // Add the styles
+  const changeVolume = (e) => {
+    let value = e.target.value;
+    audioRef.volume = value;
+    setSongInfo({ ...songInfo, volume: value });
+  };
+
   const trackAnim = {
     transform: `translateX(${songInfo.animationPercentage}%)`,
   };
@@ -111,6 +120,20 @@ const Player = ({
           size="2x"
           icon={faAngleRight}
         />
+        <FontAwesomeIcon
+          onClick={() => setActiveVolume(!activeVolume)}
+          icon={faVolumeDown}
+        />
+        {activeVolume && (
+          <InputVolume
+            onChange={changeVolume}
+            value={songInfo.volume}
+            max="1"
+            min="0"
+            step="0.01"
+            type="range"
+          />
+        )}
       </PlayControl>
     </PlayerContainer>
   );

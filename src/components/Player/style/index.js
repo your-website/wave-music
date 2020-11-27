@@ -5,7 +5,7 @@ import { Paragraph } from "./Paragraph";
 import { PlayControl } from "./PlayControl";
 import { Track } from "./Track";
 import { AnimateTrack } from "./AnimateTrack";
-
+import { InputVolume } from "./InputVolume";
 export {
   PlayerContainer,
   PlayerInput,
@@ -14,4 +14,5 @@ export {
   PlayControl,
   Track,
   AnimateTrack,
+  InputVolume,
 };
