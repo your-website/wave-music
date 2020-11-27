@@ -2,6 +2,7 @@
   "name": "wave-music",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://your-website.github.io/test-jira-cloud",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
@@ -11,7 +12,9 @@
     "@testing-library/user-event": "^12.2.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2",
     "react-scripts": "4.0.1",
+    "redux": "^4.0.5",
     "styled-components": "^5.2.1",
     "uuid": "^8.3.1",
     "web-vitals": "^0.2.4"
@@ -20,7 +23,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }

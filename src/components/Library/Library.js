@@ -1,16 +1,7 @@
-import { faSmog } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import LibrarySong from "../LibrarySong";
 import { LibraryContainer, ContentTitle } from "./style";
-const Library = ({
-  songs,
-  setCurrentSong,
-  audioRef,
-  setIsPlaying,
-  setSongs,
-  libraryStatus,
-  isPlaying,
-}) => {
+const Library = ({ songs, setCurrentSong, libraryStatus }) => {
   return (
     <LibraryContainer
       className={`libraryContainer ${libraryStatus ? "active-library" : null}`}
@@ -20,13 +11,8 @@ const Library = ({
         {songs.map((song) => (
           <LibrarySong
             song={song}
-            songs={songs}
-            setSongs={setSongs}
             setCurrentSong={setCurrentSong}
             key={song.id}
-            audioRef={audioRef}
-            setIsPlaying={setIsPlaying}
-            isPlaying={isPlaying}
           />
         ))}
       </div>

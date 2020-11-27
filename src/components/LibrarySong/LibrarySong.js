@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+import { setSongIsPlaying, setSongs } from "../../store/actions/songs";
 
 import {
   LibrarySongContainer,
@@ -12,36 +14,22 @@ const LibrarySong = ({
   song,
   setCurrentSong,
   audioRef,
-  setIsPlaying,
+  setSongIsPlaying,
   songs,
   setSongs,
-  isPlaying,
 }) => {
   const { name, cover, artist, id } = song;
 
-  const songSelectHandlerSong = async () => {
+  const songSelectHandlerntSong = async () => {
     await setCurrentSong(song);
-    const newSongs = songs.map((song) => {
-      if (song.id === id) {
-        return {
-          ...song,
-          active: true,
-        };
-      } else {
-        return {
-          ...song,
-          active: false,
-        };
-      }
-    });
-    setSongs(newSongs);
-    setIsPlaying(true);
-    if (isPlaying) audioRef.current.play();
+    setSongs(songs, id);
+    setSongIsPlaying(true);
+    audioRef.play();
   };
 
   return (
     <LibrarySongContainer
-      onClick={songSelectHandlerSong}
+      onClick={songSelectHandlerntSong}
       className={`librarySongContainer ${song.active ? "selected" : null}`}
     >
       <SongImage src={cover} alt={name} />
@@ -53,4 +41,13 @@ const LibrarySong = ({
   );
 };
 
-export default LibrarySong;
+const mapStateToProps = ({ songsData, audioRef }) => {
+  return {
+    audioRef,
+    songs: songsData,
+  };
+};
+
+export default connect(mapStateToProps, { setSongIsPlaying, setSongs })(
+  LibrarySong
+);
