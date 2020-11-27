@@ -19,7 +19,9 @@ Install npm:
 Run project
 
 > npm run build (production)
+
 > npm run dev (development)
+
 > npm run deploy (deploy GitHubPages)
 
 ### Author:

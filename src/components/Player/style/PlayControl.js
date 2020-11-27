@@ -6,7 +6,6 @@ export const PlayControl = styled.div`
   align-items: center;
   padding: 1rem;
   width: 40%;
-  margin-bottom: 1rem;
 
   & svg {
     cursor: pointer;
