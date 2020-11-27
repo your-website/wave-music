@@ -17,6 +17,7 @@ function App() {
     currentTime: 0,
     duration: 0,
     animationPercentage: 0,
+    value: 100,
   });
   const [libraryStatus, setLibraryStatus] = useState(false);
 
@@ -50,6 +51,7 @@ function App() {
       <GlobalStyle />
       <Song currentSong={currentSong} />
       <Player
+        setSongs={setSongs}
         songs={songs}
         songInfo={songInfo}
         setSongInfo={setSongInfo}

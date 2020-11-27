@@ -19,7 +19,7 @@ const LibrarySong = ({
 }) => {
   const { name, cover, artist, id } = song;
 
-  const songSelectHandlerntSong = async () => {
+  const songSelectHandlerSong = async () => {
     await setCurrentSong(song);
     const newSongs = songs.map((song) => {
       if (song.id === id) {
@@ -41,7 +41,7 @@ const LibrarySong = ({
 
   return (
     <LibrarySongContainer
-      onClick={songSelectHandlerntSong}
+      onClick={songSelectHandlerSong}
       className={`librarySongContainer ${song.active ? "selected" : null}`}
     >
       <SongImage src={cover} alt={name} />
