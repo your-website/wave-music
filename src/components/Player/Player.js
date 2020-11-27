@@ -20,6 +20,7 @@ import {
   AnimateTrack,
   Track,
   InputVolume,
+  ControlVolume,
 } from "./style";
 
 const Player = ({
@@ -120,9 +121,12 @@ const Player = ({
           size="2x"
           icon={faAngleRight}
         />
+      </PlayControl>
+      <ControlVolume>
         <FontAwesomeIcon
           onClick={() => setActiveVolume(!activeVolume)}
           icon={faVolumeDown}
+          size="2x"
         />
         {activeVolume && (
           <InputVolume
@@ -134,7 +138,7 @@ const Player = ({
             type="range"
           />
         )}
-      </PlayControl>
+      </ControlVolume>
     </PlayerContainer>
   );
 };

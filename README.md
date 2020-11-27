@@ -1,27 +1,27 @@
-- ДЕМО: https://your-website.github.io/wave-music/
+- Demo: https://your-website.github.io/wave-music/index
 
-### Используемые технологии
+## Wave-music - music player
+
+### Technologies used
 
 CSS, React, Redux.
 
-### Установка и запуск проекта
-
-Склонируйте гит-репозиторий
+### Installation and launch
 
 > git clone <https://github.com/your-website/wave-music>
 
-Установите npm-зависимости:
+Install npm:
 
 ```bash
 > npm install
 ```
 
-Запустите сборку
+Run project
 
 > npm run build (production)
 > npm run dev (development)
-> npm run deploy (deploy на GitHubPages - когда есть build)
+> npm run deploy (deploy GitHubPages)
 
-### Автор:
+### Author:
 
 - Roman Kolpachev

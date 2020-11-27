@@ -1,16 +1,11 @@
 import styled from "styled-components";
 
-export const PlayControl = styled.div`
+export const ControlVolume = styled.div`
+  position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1rem;
   width: 40%;
-  margin-bottom: 1rem;
-
-  & svg {
-    cursor: pointer;
-  }
+  height: 1rem;
 
   @media screen and (max-width: 768px) {
     width: 60%;
