@@ -2,7 +2,7 @@
   "name": "wave-music",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://your-website.github.io/test-jira-cloud",
+  "homepage": "https://your-website.github.io/wave-music",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",

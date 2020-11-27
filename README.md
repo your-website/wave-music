@@ -1,4 +1,4 @@
-- ДЕМО: https://your-website.github.io/alente/
+- ДЕМО: https://your-website.github.io/wave-music/
 
 ### Используемые технологии
 
