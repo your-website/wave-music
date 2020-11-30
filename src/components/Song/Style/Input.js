@@ -7,7 +7,7 @@ const Input = styled.input`
   width: 100%;
   height: 100%;
   transform: rotate(-90deg);
-  z-index: 5;
+  z-index: 2;
 
   -webkit-appearance: none;
   background: transparent;

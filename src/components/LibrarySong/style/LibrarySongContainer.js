@@ -9,7 +9,6 @@ export const LibrarySongContainer = styled.div.attrs((props) => ({
   cursor: pointer;
   background-color: #fff;
   transition: background-color 0.3s ease;
-
   &.selected {
     background: #f9e1f9;
   }
