@@ -126,7 +126,6 @@ const Player = ({
         <FontAwesomeIcon
           onClick={() => setActiveVolume(!activeVolume)}
           icon={faVolumeDown}
-          size="2x"
         />
         {activeVolume && (
           <InputVolume
