@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/wave-music/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/wave-music/static/js/main.027c5d6b.chunk.js",
-    "main.js.map": "/wave-music/static/js/main.027c5d6b.chunk.js.map",
+    "main.js": "/wave-music/static/js/main.c4702a09.chunk.js",
+    "main.js.map": "/wave-music/static/js/main.c4702a09.chunk.js.map",
     "runtime-main.js": "/wave-music/static/js/runtime-main.c430ec53.js",
     "runtime-main.js.map": "/wave-music/static/js/runtime-main.c430ec53.js.map",
     "static/js/2.990803d7.chunk.js": "/wave-music/static/js/2.990803d7.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.c430ec53.js",
     "static/js/2.990803d7.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.027c5d6b.chunk.js"
+    "static/js/main.c4702a09.chunk.js"
   ]
 }
