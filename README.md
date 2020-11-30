@@ -4,7 +4,7 @@
 
 ### Technologies used
 
-CSS, React, Redux.
+CSS, React, Redux, Framer Motion.
 
 ### Installation and launch
 
