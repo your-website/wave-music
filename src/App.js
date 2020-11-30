@@ -19,7 +19,7 @@ function App({ songs, currentSong: test, setCurrentSong: setTest }) {
     currentTime: 0,
     duration: 0,
     animationPercentage: 0,
-    volume: 0,
+    volume: 1,
   });
 
   const [libraryStatus, setLibraryStatus] = useState(false);
@@ -28,7 +28,11 @@ function App({ songs, currentSong: test, setCurrentSong: setTest }) {
     <AppContainer className={`App ${libraryStatus ? "library-active" : ""}`}>
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
       <GlobalStyle />
-      <Song currentSong={currentSong} />
+      <Song
+        songInfo={songInfo}
+        setSongInfo={setSongInfo}
+        currentSong={currentSong}
+      />
       <Player
         songInfo={songInfo}
         setSongInfo={setSongInfo}

@@ -8,7 +8,6 @@ import {
   faAngleLeft,
   faAngleRight,
   faPause,
-  faVolumeDown,
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -19,8 +18,6 @@ import {
   PlayControl,
   AnimateTrack,
   Track,
-  InputVolume,
-  ControlVolume,
 } from "./style";
 
 const Player = ({
@@ -33,8 +30,6 @@ const Player = ({
   currentSong,
   setCurrentSong,
 }) => {
-  const [activeVolume, setActiveVolume] = useState(false);
-
   const getTime = (time) => {
     return (
       Math.floor(time / 60) + ":" + ("0" + Math.floor(time % 60)).slice(-2)
@@ -71,12 +66,6 @@ const Player = ({
       await setCurrentSong(songs[(currentIndex - 1) % songs.length]);
     }
     if (isPlaying) audioRef.play();
-  };
-
-  const changeVolume = (e) => {
-    let value = e.target.value;
-    audioRef.volume = value;
-    setSongInfo({ ...songInfo, volume: value });
   };
 
   const trackAnim = {
@@ -122,22 +111,6 @@ const Player = ({
           icon={faAngleRight}
         />
       </PlayControl>
-      <ControlVolume>
-        <FontAwesomeIcon
-          onClick={() => setActiveVolume(!activeVolume)}
-          icon={faVolumeDown}
-        />
-        {activeVolume && (
-          <InputVolume
-            onChange={changeVolume}
-            value={songInfo.volume}
-            max="1"
-            min="0"
-            step="0.01"
-            type="range"
-          />
-        )}
-      </ControlVolume>
     </PlayerContainer>
   );
 };
