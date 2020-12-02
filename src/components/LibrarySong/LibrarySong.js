@@ -1,7 +1,8 @@
 import React from "react";
+// Redux
 import { connect } from "react-redux";
 import { setSongIsPlaying, setActiveSong } from "../../store/actions/songs";
-
+// Style
 import {
   LibrarySongContainer,
   SongImage,
@@ -20,7 +21,7 @@ const LibrarySong = ({
 }) => {
   const { name, cover, artist, id } = song;
 
-  const songSelectHandlerntSong = async () => {
+  const songSelectHandlerSong = async () => {
     await setCurrentSong(song);
     setActiveSong(songs, id);
     setSongIsPlaying(true);
@@ -29,7 +30,7 @@ const LibrarySong = ({
 
   return (
     <LibrarySongContainer
-      onClick={songSelectHandlerntSong}
+      onClick={songSelectHandlerSong}
       className={`librarySongContainer ${song.active ? "selected" : null}`}
     >
       <SongImage src={cover} alt={name} />

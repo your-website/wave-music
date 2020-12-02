@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// Redux
 import { connect } from "react-redux";
 import { setAudioRef } from "../../store/actions/songs";
 

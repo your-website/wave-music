@@ -1,5 +1,7 @@
 import React from "react";
+// Component
 import LibrarySong from "../LibrarySong";
+// Style
 import { LibraryContainer, ContentTitle } from "./style";
 const Library = ({ songs, setCurrentSong, libraryStatus }) => {
   return (

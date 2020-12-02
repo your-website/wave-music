@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
+// Redux
 import { connect } from "react-redux";
 import { setSongIsPlaying } from "../../store/actions/songs";
-
+// Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPlay,
@@ -9,7 +10,7 @@ import {
   faAngleRight,
   faPause,
 } from "@fortawesome/free-solid-svg-icons";
-
+// Syle
 import {
   PlayerContainer,
   PlayerInput,

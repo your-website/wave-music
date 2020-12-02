@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+// Redux
 import { connect } from "react-redux";
+// Animate
 import { motion } from "framer-motion";
 import SpanAnim from "./../SpanAnim";
 
